@@ -1,28 +1,227 @@
-body {
-    font-family: 'Inter', sans-serif;
-}
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-}
-.schedule-table {
-    width: 100%;
-    border-collapse: collapse;
-     margin-top: 20px;
-}
-.schedule-table th, .schedule-table td {
-    border: 1px solid #e2e8f0;
-    padding: 12px;
-    text-align: left;
-}
-.schedule-table th {
-    background-color: #f7fafc;
-    font-weight: 600;
-}
-.schedule-table tbody tr:nth-child(odd) {
-    background-color: #f7fafc;
-}
-.schedule-table td:first-child {
-    font-weight: 500;
-}
+/* CSS Variables / Custom Properties */
+        :root {
+            --primary: #166088;
+            --secondary: #114b69;
+            --accent: #0f9e99;
+            --dark: #2d3142;
+            --light: #efe9e0;
+            --medium: #e2dcd1;
+        }
+        
+        /* Base Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            transition: all 0.3s ease;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        /* Text Utilities */
+        .text-center { text-align: center; }
+        .text-2xl { font-size: 1.5rem; }
+        .text-sm { font-size: 0.875rem; }
+        .font-bold { font-weight: 700; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .opacity-90 { opacity: 0.9; }
+        
+        /* Header Styles */
+        .page-header {
+            background-color: var(--primary);
+            color: var(--light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .page-header:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Table Styles */
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .schedule-table th {
+            background-color: var(--secondary);
+            color: var(--light);
+            padding: 1rem;
+            text-align: left;
+        }
+        
+        .schedule-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--medium);
+        }
+        
+        .schedule-table tbody tr {
+            background-color: white;
+            transition: background-color 0.3s ease;
+        }
+        
+        .schedule-table tbody tr:hover {
+            background-color: var(--medium);
+        }
+        
+        .schedule-table tbody tr:nth-child(odd) {
+            background-color: rgba(239, 233, 224, 0.5);
+        }
+        
+        .schedule-table td:first-child {
+            font-weight: 500;
+            color: var(--primary);
+        }
+        
+        /* Notes Section */
+        .notes-section {
+            background: linear-gradient(to bottom right, white, var(--light));
+            border-left: 4px solid var(--accent);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .notes-title {
+            color: var(--primary);
+            position: relative;
+            padding-bottom: 10px;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        
+        .notes-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .notes-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+        
+        .notes-list li {
+            margin-bottom: 0.75rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .notes-list li::before {
+            content: '•';
+            color: var(--accent);
+            font-size: 1.2em;
+            position: absolute;
+            left: 0;
+            top: -0.1em;
+        }
+        
+        /* Activity Styles */
+        .activity-card {
+            border-left: 3px solid;
+            padding-left: 10px;
+        }
+        
+        .study { border-color: var(--primary); }
+        .leisure { border-color: var(--accent); }
+        .essential { border-color: var(--dark); }
+        
+        .highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        .space-y-2 > * + * {
+            margin-top: 0.5rem;
+        }
+        
+        .overflow-hidden {
+            overflow: hidden;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .page-header {
+                padding: 1rem;
+            }
+            
+            .schedule-table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .schedule-table th, 
+            .schedule-table td {
+                padding: 0.75rem;
+            }
+            
+            .mobile-col-1 {
+                width: 110px;
+                min-width: 110px;
+            }
+            
+            .mobile-col-3 {
+                width: 90px;
+                min-width: 90px;
+            }
+            
+            .md\:text-3xl {
+                font-size: 1.875rem;
+            }
+            
+            .md\:text-base {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .page-header h1 {
+                font-size: 1.25rem;
+            }
+            
+            .page-header p {
+                font-size: 0.75rem;
+            }
+            
+            .mobile-col-1 {
+                width: 100px;
+                min-width: 100px;
+            }
+            
+            .mobile-col-3 {
+                width: 80px;
+                min-width: 80px;
+            }
+        }
+        
+        /* Animation for the table rows loading */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }

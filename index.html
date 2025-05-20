@@ -4,94 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>6-Month CSE Study Schedule</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-100">
+i<body>
+    <script src="script.js"></script>
     <div class="container">
-        <h1 class="text-2xl font-semibold text-gray-800 mb-6 text-center">6-Month CSE Study Schedule</h1>
-        <p class="text-gray-600 mb-8 text-center">This schedule is designed for a CSE student, balancing academic rigor with personal time. It assumes a 6-month semester with daily classes.</p>
+        <header class="page-header text-center">
+            <h1 class="text-2xl md:text-3xl font-bold mb-2">6-Month CSE Study Schedule</h1>
+            <p class="text-sm md:text-base opacity-90">A balanced academic plan for Computer Science Engineering students</p>
+        </header>
 
-        <table class="schedule-table">
-            <thead>
-                <tr>
-                    <th>Time</th>
-                    <th>Activity</th>
-                    <th>Duration</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>6:00 AM - 7:00 AM</td>
-                    <td>Exercise / Cycling</td>
-                    <td>1 Hour</td>
-                </tr>
-                <tr>
-                    <td>7:00 AM - 7:30 AM</td>
-                    <td>Breakfast</td>
-                    <td>30 Minutes</td>
-                </tr>
-                 <tr>
-                    <td>7:30 AM - 8:00 AM</td>
-                    <td>Travel to College</td>
-                    <td>30 Minutes</td>
-                </tr>
-                <tr>
-                    <td>8:00 AM - 2:00 PM</td>
-                    <td>College Lectures / Practicals</td>
-                    <td>6 Hours</td>
-                </tr>
-                <tr>
-                    <td>2:00 PM - 2:30 PM</td>
-                    <td>Travel from College</td>
-                    <td>30 Minutes</td>
-                </tr>
-                <tr>
-                    <td>2:30 PM - 3:00 PM</td>
-                    <td>Lunch</td>
-                    <td>30 Minutes</td>
-                </tr>
-                <tr>
-                    <td>3:00 PM - 5:00 PM</td>
-                    <td>Self-Study Session 1</td>
-                    <td>2 Hours</td>
-                </tr>
-                <tr>
-                    <td>5:00 PM - 5:30 PM</td>
-                    <td>Snacks</td>
-                    <td>30 Minutes</td>
-                </tr>
-                <tr>
-                    <td>5:30 PM - 7:30 PM</td>
-                    <td>Fun Time (Games, Hobbies, Relaxation)</td>
-                    <td>2 Hours</td>
-                </tr>
-                <tr>
-                    <td>7:30 PM - 9:30 PM</td>
-                    <td>Self-Study Session 2</td>
-                    <td>2 Hours</td>
-                </tr>
-                <tr>
-                    <td>9:30 PM - 10:00 PM</td>
-                    <td>Dinner</td>
-                    <td>30 Minutes</td>
-                </tr>
-                <tr>
-                    <td>10:00 PM Onwards</td>
-                    <td>Relax/Sleep</td>
-                    <td>Flexible</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="overflow-hidden">
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th class="mobile-col-1">Time</th>
+                        <th>Activity</th>
+                        <th class="mobile-col-3">Duration</th>
+                    </tr>
+                </thead>
+                <tbody id="schedule-body">
+                    <tr>
+                        <td class="mobile-col-1">6:00 AM - 7:00 AM</td>
+                        <td><div class="activity-card essential">Exercise / Cycling</div></td>
+                        <td class="mobile-col-3">1 Hour</td>
+                    </tr>
+                    <tr>
+                        <td class="mobile-col-1">7:00 AM - 7:30 AM</td>
+                        <td><div class="activity-card essential">Breakfast</div></td>
+                        <td class="mobile-col-3">30 Minutes</td>
+                    </tr>
+                    <tr>
+                        <td class="mobile-col-1">7:30 AM - 8:00 AM</td>
+                        <td><div class="activity-card essential">Travel to College</div></td>
+                        <td class="mobile-col-3">30 Minutes</td>
+                    </tr>
+                    <tr>
+                        <td class="mobile-col-1">8:00 AM - 2:00 PM</td>
+                        <td><div class="activity-card study">College Lectures / Practicals</div></td>
+                        <td class="mobile-col-3">6 Hours</td>
+                    </tr>
+                    <tr>
+                        <td class="mobile-col-1">2:00 PM - 2:30 PM</td>
+                        <td><div class="activity-card essential">Travel from College</div></td>
+                        <td class="mobile-col-3">30 Minutes</td>
+                    </tr>
+                    <tr>
+                        <td class="mobile-col-1">2:30 PM - 3:00 PM</td>
+                        <td><div class="activity-card essential">Lunch</div></td>
+                        <td class="mobile-col-3">30 Minutes</td>
+                    </tr>
+                    <tr>
+                        <td class="mobile-col-1">3:00 PM - 5:00 PM</td>
+                        <td><div class="activity-card study">Self-Study Session 1</div></td>
+                        <td class="mobile-col-3">2 Hours</td>
+                    </tr>
+                    <tr>
+                        <td class="mobile-col-1">5:00 PM - 5:30 PM</td>
+                        <td><div class="activity-card essential">Snacks</div></td>
+                        <td class="mobile-col-3">30 Minutes</td>
+                    </tr>
+                    <tr>
+                        <td class="mobile-col-1">5:30 PM - 7:30 PM</td>
+                        <td><div class="activity-card leisure">Fun Time (Games, Hobbies, Relaxation)</div></td>
+                        <td class="mobile-col-3">2 Hours</td>
+                    </tr>
+                    <tr>
+                        <td class="mobile-col-1">7:30 PM - 9:30 PM</td>
+                        <td><div class="activity-card study">Self-Study Session 2</div></td>
+                        <td class="mobile-col-3">2 Hours</td>
+                    </tr>
+                    <tr>
+                        <td class="mobile-col-1">9:30 PM - 10:00 PM</td>
+                        <td><div class="activity-card essential">Dinner</div></td>
+                        <td class="mobile-col-3">30 Minutes</td>
+                    </tr>
+                    <tr>
+                        <td class="mobile-col-1">10:00 PM Onwards</td>
+                        <td><div class="activity-card leisure">Relax/Sleep</div></td>
+                        <td class="mobile-col-3">Flexible</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-        <section class="mt-8 p-6 bg-white rounded-lg shadow-md">
-            <h2 class="text-xl font-semibold text-gray-800 mb-4">Important Notes:</h2>
-            <ul class="list-disc list-inside space-y-2 text-gray-700">
-                <li>Prioritize your academic commitments idiot. Ensure you attend all lectures and practicals, and dedicate sufficient time for self-study.</li>
-                <li>"Fun time" is crucial for maintaining a healthy work-life balance. Use this time to relax, pursue your hobbies, or socialize with friends and don't forget about Syntax&lt;&sol;&gt;Breakers.</li>
+        <section class="notes-section">
+            <h2 class="notes-title text-xl font-semibold mb-4">Important Notes:</h2>
+            <ul class="notes-list space-y-2">
+                <li>Prioritize your academic commitments. Ensure you attend all lectures and practicals, and dedicate sufficient time for self-study.</li>
+                <li><span class="highlight">Fun time</span> is crucial for maintaining a healthy work-life balance. Use this time to relax, pursue your hobbies, or socialize with friends and Syntax&lt;&sol;&gt;Breakers.</li>
                 <li>The schedule includes 1 hour of daily exercise, which is essential for physical and mental well-being.</li>
                 <li>Travel time to and from college is factored in. If your commute is shorter or longer, adjust the schedule accordingly.</li>
                 <li>Meal times are included to ensure you have regular and healthy meals.</li>
