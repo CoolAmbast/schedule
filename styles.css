@@ -1,0 +1,28 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+     margin-top: 20px;
+}
+.schedule-table th, .schedule-table td {
+    border: 1px solid #e2e8f0;
+    padding: 12px;
+    text-align: left;
+}
+.schedule-table th {
+    background-color: #f7fafc;
+    font-weight: 600;
+}
+.schedule-table tbody tr:nth-child(odd) {
+    background-color: #f7fafc;
+}
+.schedule-table td:first-child {
+    font-weight: 500;
+}
